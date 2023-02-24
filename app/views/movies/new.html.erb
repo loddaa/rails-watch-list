@@ -1,0 +1,7 @@
+<h1>Add a new movie</h1>
+<%= simple_form_for @movie do |f| %>
+  <%= f.input :title %>
+  <%= f.input :overview %>
+  <%= f.input :poster_url, placeholder: 'www.movie-image.com' %>
+  <%= f.button :submit, class: "btn btn-primary"%>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>All movies</h1>
+
+<% @movies.each do |movie| %>
+  <p><%= movie.title %></p>
+  <p><%= link_to movie.title, movie_path(movie) %></p>
+  <p><%= image_tag(movie.poster_url, size: "200x300", alt: movie.title) %></p>
+  <p><%= movie.overview %></p>
+  <p><%= movie.rating %></p>
+  <hr>
+<% end %>
